@@ -1,0 +1,26 @@
+{
+  "recommendations": [
+    "vscjava.vscode-java-pack",
+    "pivotal.vscode-manifest-yaml",
+    "redhat.vscode-community-server-connector",
+    "pivotal.vscode-concourse",
+    "vscjava.vscode-java-debug",
+    "microprofile-community.vscode-microprofile-pack",
+    "microprofile-community.mp-rest-client-generator-vscode-ext",
+    "vscjava.vscode-java-test",
+    "redhat.java",
+    "vscjava.vscode-maven",
+    "microprofile-community.mp-starter-vscode-ext",
+    "vscjava.vscode-java-dependency",
+    "redhat.vscode-quarkus",
+    "redhat.vscode-commons",
+    "redhat.vscode-rsp-ui",
+    "sonarsource.sonarlint-vscode",
+    "vscjava.vscode-spring-boot-dashboard",
+    "pivotal.vscode-boot-dev-pack",
+    "pivotal.vscode-spring-boot",
+    "vscjava.vscode-spring-initializr",
+    "redhat.vscode-microprofile",
+    "visualstudioexptteam.vscodeintellicode"
+  ]
+}
