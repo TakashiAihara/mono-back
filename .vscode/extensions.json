@@ -21,6 +21,7 @@
     "pivotal.vscode-spring-boot",
     "vscjava.vscode-spring-initializr",
     "redhat.vscode-microprofile",
-    "visualstudioexptteam.vscodeintellicode"
+    "visualstudioexptteam.vscodeintellicode",
+    "dotjoshjohnson.xml"
   ]
 }
