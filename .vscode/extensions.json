@@ -1,7 +1,5 @@
 {
   "recommendations": [
-    "vscjava.vscode-java-pack",
-    "pivotal.vscode-manifest-yaml",
     "redhat.vscode-community-server-connector",
     "pivotal.vscode-concourse",
     "vscjava.vscode-java-debug",
