@@ -4,6 +4,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import lombok.AllArgsConstructor;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import java.util.List;
@@ -19,6 +20,7 @@ import com.handson.spring_boot_handson.domain.repositories.UserRepository;
 public class UsersController {
     private final UserRepository userRepository;
 
+    @CrossOrigin(origins = "http://localhost:8080")
     @GetMapping("/users")
     public  List<User> getMethodName(@RequestParam(required = false) String q) {
         if (isNumber(q)) {
