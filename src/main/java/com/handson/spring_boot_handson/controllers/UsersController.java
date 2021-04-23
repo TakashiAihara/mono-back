@@ -24,9 +24,9 @@ public class UsersController {
     @GetMapping("/users")
     public  List<User> getMethodName(@RequestParam(required = false) String q) {
         if (isNumber(q)) {
-            return userRepository.findByNameContainingOrId(q,Integer.parseInt(q));
+            return userRepository.findByNameContainingIgnoreCaseOrId(q,Integer.parseInt(q));
         } else {
-            return userRepository.findByNameContaining(q);
+            return userRepository.findByNameContainingIgnoreCase(q);
         }
     }
 
