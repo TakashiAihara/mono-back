@@ -6,6 +6,8 @@ import lombok.AllArgsConstructor;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -22,12 +24,18 @@ public class UsersController {
 
     @CrossOrigin(origins = "http://localhost:8080")
     @GetMapping("/users")
-    public  List<User> getMethodName(@RequestParam(required = false) String q) {
+    public  List<User> getUsers(@RequestParam(required = false) String q) {
         if (isNumber(q)) {
             return userRepository.findByNameContainingIgnoreCaseOrId(q,Integer.parseInt(q));
         } else {
             return userRepository.findByNameContainingIgnoreCase(q);
         }
+    }
+
+    @CrossOrigin(origins = "http://localhost:8080")
+    @GetMapping("/users/{id}")
+    public  User getUser(@PathVariable(name = "id") int id) {
+            return userRepository.findById(id).get();
     }
 
     private boolean isNumber(String num) {

@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
     @Repository
     public interface UserRepository extends JpaRepository<User, Integer> {
 
-        List<User> findByNameContainingOrId(String infix1, Integer infix2);
-        List<User> findByNameContaining(String infix1);
+        List<User> findByNameContainingIgnoreCaseOrId(String infix1, Integer infix2);
+        List<User> findByNameContainingIgnoreCase(String infix1);
 
     }
