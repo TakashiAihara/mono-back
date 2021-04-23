@@ -22,7 +22,7 @@ import com.handson.spring_boot_handson.domain.repositories.UserRepository;
 public class UsersController {
     private final UserRepository userRepository;
 
-    @CrossOrigin(origins = "http://localhost:8080")
+    @CrossOrigin(origins = "http://ubuntu:8080")
     @GetMapping("/users")
     public  List<User> getUsers(@RequestParam(required = false) String q) {
         if (isNumber(q)) {
