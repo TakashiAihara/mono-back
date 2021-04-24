@@ -32,7 +32,7 @@ public class UsersController {
         }
     }
 
-    @CrossOrigin(origins = "http://localhost:8080")
+    @CrossOrigin(origins = "http://ubuntu:8080")
     @GetMapping("/users/{id}")
     public  User getUser(@PathVariable(name = "id") int id) {
             return userRepository.findById(id).get();
