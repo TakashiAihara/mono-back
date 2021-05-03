@@ -24,4 +24,7 @@ public class PersonEntity {
         this.name = name;
         this.id = id;
     }
+
+    public PersonEntity() {
+    }
 }
