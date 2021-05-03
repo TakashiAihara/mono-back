@@ -1,4 +1,4 @@
-package com.handson.spring_boot_handson.domain.models;
+package com.handson.domain.person;
 
 import lombok.Data;
 import javax.persistence.Column;
@@ -9,14 +9,19 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "users", schema = "public")
+@Table(name = "person", schema = "public")
 @Data
-public class User {
+public class PersonEntity {
+
+    @Column
+    private String name;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column
-    private String name;
+    public PersonEntity( int id, String name) {
+        this.name = name;
+        this.id = id;
+    }
 }

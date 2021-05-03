@@ -1,13 +1,12 @@
-package com.handson.spring_boot_handson;
+package com.handson;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringBootHandsonApplication {
+public class HandsonApp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBootHandsonApplication.class, args);
+		SpringApplication.run(HandsonApp.class, args);
 	}
-
 }
