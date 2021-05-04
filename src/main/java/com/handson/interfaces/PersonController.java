@@ -28,13 +28,18 @@ public class PersonController {
     @PostMapping("/person")
     public PersonEntity createPerson(@RequestBody PersonEntity personEntity) {
         // @TODO validation
+        // @TODO exception
         return personService.create(personEntity);
     }
 
     @PutMapping("/person/{id}")
     public PersonEntity updatePerson(@PathVariable(name = "id") int id, @RequestBody PersonEntity personEntity) {
-        personEntity.setId(id);
-        return personService.update(personEntity);
+        try {
+            personEntity.setId(id);
+            return personService.update(personEntity);
+        } catch (Exception e) {
+            return null;
+        }
     }
 
     @DeleteMapping("/person/{id}")
