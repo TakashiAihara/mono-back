@@ -16,7 +16,7 @@ import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
 @RestController
-@CrossOrigin(origins = "http://ubuntu:8080")
+@CrossOrigin(origins = "http://localhost:8080")
 public class PersonsController {
     private final PersonService personService;
 

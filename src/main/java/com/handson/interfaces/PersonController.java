@@ -16,7 +16,7 @@ import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
 @RestController
-@CrossOrigin(origins = "http://ubuntu:8080")
+@CrossOrigin(origins = "http://localhost:8080")
 public class PersonController {
     private final PersonService personService;
 
@@ -25,18 +25,19 @@ public class PersonController {
         return personService.find(id);
     }
 
-    @PostMapping("/person/create")
+    @PostMapping("/person")
     public PersonEntity createPerson(@RequestBody PersonEntity personEntity) {
+        // @TODO validation
         return personService.create(personEntity);
     }
 
-    @PutMapping("/person/{id}/update")
+    @PutMapping("/person/{id}")
     public PersonEntity updatePerson(@PathVariable(name = "id") int id, @RequestBody PersonEntity personEntity) {
         personEntity.setId(id);
         return personService.update(personEntity);
     }
 
-    @DeleteMapping("/person/{id}/delete")
+    @DeleteMapping("/person/{id}")
     public boolean deletePerson(@PathVariable(name = "id") int id) {
         try {
             personService.delete(id);
